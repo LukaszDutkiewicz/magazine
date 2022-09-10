@@ -1,15 +1,29 @@
 const urlItems = "/main-api/items/";
 const state = {
-    items: []
+    items: [],
+    item: {
+        id: 0,
+        name: "",
+        price: 0,
+        category_id: 0
+    }
 }
 
 const getters = {
-    getItems: state => state.items
+    getItems: state => state.items,
+    getItem: state => state.item,
+    getItemId: state => state.item.id,
 }
 
 const mutations = {
     setItems(state, data) {
         state.items = data;
+    },
+    setItem(state, data) {
+        state.item = data;
+    },
+    setItemId(state, data) {
+        state.item.id = data;
     }
 }
 
@@ -18,6 +32,13 @@ const actions = {
         VueComponent.$http.get(urlItems + "list")
             .then(response => {
                 state.commit("setItems", response.body.items);
+            })
+    },
+    async createItem(state, VueComponent) {
+        var item = state.getters.getItem;
+        await VueComponent.$http.post(urlItems + "create", { item: item })
+            .then(response => {
+                console.log(response);
             })
     }
 }
