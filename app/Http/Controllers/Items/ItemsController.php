@@ -16,6 +16,6 @@ class ItemsController extends Controller
     public function list()
     {
         $items = $this->itemsService->list();
-        return response()->json(['itmes' => $items]);
+        return response()->json(['items' => $items]);
     }
 }

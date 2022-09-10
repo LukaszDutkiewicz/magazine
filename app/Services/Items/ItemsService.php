@@ -11,9 +11,10 @@ class ItemsService
     {
         $this->itemModel = $itemModel;
     }
+
     public function list()
     {
-        $items = $this->itemModel->get();
+        $items = $this->itemModel->with('category')->get();
         return $items;
     }
 }
