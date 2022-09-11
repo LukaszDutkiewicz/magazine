@@ -40,6 +40,13 @@ const actions = {
             .then(response => {
                 console.log(response);
             })
+    },
+    async destroyItem(state, VueComponent) {
+        var id = state.getters.getItemId;
+        await VueComponent.$http.delete(urlItems + "destroy/" + id)
+            .then(response => {
+                console.log(response);
+            })
     }
 }
 
