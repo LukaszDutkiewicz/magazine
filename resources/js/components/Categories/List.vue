@@ -8,6 +8,7 @@
                         <tr>
                             <th>Lp</th>
                             <th>Nazwa</th>
+                            <th>Użytkownik</th>
                             <th>Usuń</th>
                         </tr>
                     </thead>
@@ -15,6 +16,11 @@
                         <tr v-for="(category,index) in categories" :key="category.name">
                             <td>{{ index+1 }}</td>
                             <td>{{ category.name }}</td>
+                            <td>
+                                <span v-if="category.user">
+                                    {{ category.user.name }}
+                                </span>
+                            </td>
                             <td>
                                 <v-btn @click="destroyCategory(category.id)" color="error" fab x-small>
                                     <v-icon>

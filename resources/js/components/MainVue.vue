@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-footer>
+        <v-footer class="grey">
             <router-link to="/items/list">
                 <v-btn class="primary ml-2">Przedmioty</v-btn>
             </router-link>

@@ -20145,10 +20145,10 @@ var render = function render() {
     scopedSlots: _vm._u([{
       key: "default",
       fn: function fn() {
-        return [_c("thead", [_c("tr", [_c("th", [_vm._v("Lp")]), _vm._v(" "), _c("th", [_vm._v("Nazwa")]), _vm._v(" "), _c("th", [_vm._v("Usuń")])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.categories, function (category, index) {
+        return [_c("thead", [_c("tr", [_c("th", [_vm._v("Lp")]), _vm._v(" "), _c("th", [_vm._v("Nazwa")]), _vm._v(" "), _c("th", [_vm._v("Użytkownik")]), _vm._v(" "), _c("th", [_vm._v("Usuń")])])]), _vm._v(" "), _c("tbody", _vm._l(_vm.categories, function (category, index) {
           return _c("tr", {
             key: category.name
-          }, [_c("td", [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(category.name))]), _vm._v(" "), _c("td", [_c(vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          }, [_c("td", [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(category.name))]), _vm._v(" "), _c("td", [category.user ? _c("span", [_vm._v("\n                                " + _vm._s(category.user.name) + "\n                            ")]) : _vm._e()]), _vm._v(" "), _c("td", [_c(vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_2__["default"], {
             attrs: {
               color: "error",
               fab: "",
@@ -20398,7 +20398,9 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c(vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_0__["default"], [_c(vuetify_lib_components_VFooter__WEBPACK_IMPORTED_MODULE_1__["default"], [_c("router-link", {
+  return _c(vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_0__["default"], [_c(vuetify_lib_components_VFooter__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    staticClass: "grey"
+  }, [_c("router-link", {
     attrs: {
       to: "/items/list"
     }
