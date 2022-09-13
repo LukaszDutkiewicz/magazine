@@ -19,6 +19,7 @@ class ItemController extends Controller
         $item = $request->get('item');
         $item['user_id'] = $request->user()->id;
         $this->itemService->create($item);
+        return response()->json(['message' => 'Prawidłowo dodano Item']);
     }
     public function get($id)
     {

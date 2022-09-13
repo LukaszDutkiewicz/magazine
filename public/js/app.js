@@ -451,7 +451,8 @@ var state = {
   categories: [],
   category: {
     id: 0,
-    name: ""
+    name: "",
+    user_id: 0
   }
 };
 var getters = {
@@ -20301,7 +20302,7 @@ var render = function render() {
         return _vm.createItem();
       }
     }
-  }, [_vm._v("\n                    Stwórz\n                ")])], 1)], 1)], 1)], 1);
+  }, [_vm._v("\n                    Dodaj\n                ")])], 1)], 1)], 1)], 1);
 };
 
 var staticRenderFns = [];

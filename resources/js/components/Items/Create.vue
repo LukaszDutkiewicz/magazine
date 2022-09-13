@@ -39,7 +39,7 @@
                     </v-btn>
                     <v-spacer></v-spacer>
                     <v-btn color="primary" text @click="createItem()">
-                        Stwórz
+                        Dodaj
                     </v-btn>
                 </v-card-actions>
             </v-card>

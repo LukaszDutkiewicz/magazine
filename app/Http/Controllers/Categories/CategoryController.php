@@ -18,12 +18,14 @@ class CategoryController extends Controller
     public function create(Request $request)
     {
         $category = $request->get('category');
+        $category['user_id'] = $request->user()->id;
         $this->categoryService->create($category);
     }
     public function get($id)
     {
         $category = $this->categoryService->get($id);
         return response()->json(['category' => $category]);
+        return response()->json(['message' => 'Prawiłowow dodano kategorię']);
     }
 
     public function destroy($id)
